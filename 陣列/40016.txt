@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<assert.h>
+#include <math.h>
+main()
+{
+int t;
+scanf("%d",&t);
+int a[t],b[t],c[t],d[t],e[t],k;
+for(int i=0;i<t;i++)
+scanf("%d",&a[i]);
+for(int i=0;i<t;i++)
+scanf("%d",&b[i]);
+for(int i=0;i<t;i++)
+scanf("%d",&c[i]);
+for(int i=0;i<t;i++)
+d[i]=a[i]+b[i];
+for(int i=0;i<t;i++)
+e[i]=d[i]*c[i];
+for(int i=0;i<t;i++)
+k+=e[i];
+printf("%d",k);
+}

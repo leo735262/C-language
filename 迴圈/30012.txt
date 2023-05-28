@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<assert.h>
+#include <math.h>
+main()
+{
+int t,p,m,nogative=0;
+scanf("%d",&t);
+for(int i=0;i<t;i++){
+scanf("%d",&p);
+nogative++;
+if(p<0)break;
+}
+if(p<0)printf("%d",nogative);
+    if(p>0)printf("%d",m);
+
+}

@@ -1,0 +1,13 @@
+#include<stdio.h>
+ main()
+ {
+    int i,n,k;
+    scanf("%d",&n);
+    do
+    {
+        k=n%10;
+        n/=10;
+        printf("%d\n",k);
+    }
+    while(n!=0);
+ }

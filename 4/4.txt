@@ -1,0 +1,13 @@
+#include<stdio.h>
+main()
+{
+int a,b,c,d;
+scanf("%d",&a);
+scanf("%d",&b);
+scanf("%d",&c);
+scanf("%d",&d);
+printf("%d\n",b);
+printf("%d\n",a);
+printf("%d\n",d);
+printf("%d\n",c);
+}

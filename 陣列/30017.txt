@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <assert.h>
+#define ARRAYSIZE 1001
+main()
+{
+    int a,n,i,k;
+    scanf("%d",&n);
+    assert(n>=1 && n<ARRAYSIZE);
+    int m[ARRAYSIZE];
+    bool found=false;
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&(m[i]));
+    }
+    scanf("%d",&a);
+    for(k=1;k<=n;k++)
+    {
+        if(a==m[k])
+        {
+            printf("%d",k);
+            found=true;
+        }
+    }
+    if(!found)printf("0");
+}

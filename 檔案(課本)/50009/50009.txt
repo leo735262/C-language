@@ -1,0 +1,118 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+   FILE *aa,*bb;
+   int key;
+   char a[50];
+   fscanf(stdin,"%s",&a);
+   char *table[]={"LEFTRIGHT","UPDOWN","ROTATE90","ROTATE180","ROTATE270"};
+   for(int i=0;i<5;i++){
+   if(strcmp(a,table[i])==0)
+   key=i;
+   }
+   aa=fopen("input.bmp","rb");
+   bb=fopen("output.bmp","wb");
+   char b;
+   for(int i=0;i<54;i++){
+    fscanf(aa,"%c",&b);
+    fprintf(bb,"%c",b);
+   }
+   char conteant[475][1900];     (d)
+   for(int i=0;i<475;i++){
+        for(int j=0;j<1900;j++){
+             fscanf(aa,"%c",&conteant[i][j]);
+
+        }
+
+   }
+   fclose(aa);
+   char ts[475][1900];  sp
+   switch(key){
+   case 0:
+       for(int i=0;i<475;i++){
+        for(int j=0,w=1896;j<1900;j+=4,w-=4){
+        for(int y=0;y<4;y++){
+        ts[i][j+y]=conteant[i][w+y];
+        }
+        }
+       }
+       for(int i=0;i<475;i++){
+        for(int j=0;j<1900;j++){
+             fprintf(bb,"%c",ts[i][j]);
+
+        }
+
+   }
+break;
+   case 1:
+       for(int i=0,j=474;i<475;i++,j--){
+            for(int w=0;w<1900;w++){
+            ts[i][w]=conteant[j][w];
+            }
+
+       }
+       for(int i=0;i<475;i++){
+        for(int j=0;j<1900;j++){
+             fprintf(bb,"%c",ts[i][j]);
+
+        }
+
+   }break;
+   case 3:
+       for(int i=0;i<475;i++){
+        for(int j=0;j<475;j++){
+                for(int w=0;w<4;w++){
+            ts[i][j*4+w]=conteant[474-i][1896-j*4+w];
+            }
+        }
+       }for(int i=0;i<475;i++){
+        for(int j=0;j<1900;j++){
+             fprintf(bb,"%c",ts[i][j]);
+
+        }
+
+   }
+
+
+
+
+    break;
+   case 2:
+       for(int i=0;i<475;i++){
+        for(int j=0;j<1900;j++){
+        ts[i][j]=conteant[j/4][1896+j%4-4*i];
+        }
+       }for(int i=0;i<475;i++){
+        for(int j=0;j<1900;j++){
+             fprintf(bb,"%c",ts[i][j]);
+
+        }
+
+   }
+
+
+    break;
+   case 4:
+       for(int i=0;i<475;i++){
+            for(int w=0;w<1900;w++){
+        ts[i][w]=conteant[474-(w/4)][w%4+i*4];/*w=0~1899 | j=0~3*/
+        }
+       }
+       for(int i=0;i<475;i++){
+        for(int j=0;j<1900;j++){
+             fprintf(bb,"%c",ts[i][j]);
+
+        }}break;
+
+
+
+
+
+
+
+
+
+
+   }
+}

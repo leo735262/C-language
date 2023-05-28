@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+main()
+{
+int a,x=0,y=0;
+ 
+while (scanf("%c", &a)!=EOF)
+{
+if(a==78 || a==110)y++;
+if(a==69 || a==101)x++;
+if(a==87 || a==119)x--;
+if(a==83 || a==115)y--;
+}
+ 
+printf("%d %d",x,y);
+}

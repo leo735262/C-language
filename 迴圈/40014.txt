@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<assert.h>
+#include <math.h>
+main()
+{
+int n,a,b,c,d,k=0,j;
+scanf("%d",&n);
+for(int i=0,k=0;i<n;i++){
+scanf("%d%d%d%d",&a,&b,&c,&d);
+switch(a){
+case 1:
+    k=b+c;
+    break;
+case 2:
+    k=b-c;
+    break;
+
+case 3:
+    k=b*c;
+    break;
+
+case 4:
+    k=b/c;
+    break;
+
+case 5:
+    k=b%c;
+    break;
+default:
+printf("what are  you fucking doing?");}
+j=k;
+if(k!=d){printf("0");break;}
+
+}
+if(j==d)printf("1");
+}

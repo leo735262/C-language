@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdbool.h>
+main()
+{
+int k;
+scanf("%d",&k);
+int a=k/1000,b=(k-a*1000)/100,c=(k-a*1000-b*100)/10,d=(k-a*1000-b*100-c*10);
+printf("%d%d%d%d",b,a,d,c);
+}
+

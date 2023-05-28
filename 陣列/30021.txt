@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <assert.h>
+#define ROW 10
+#define COL 10
+main(){
+    int m,n,i,j,x,y;
+    int a[ROW][COL];
+ 
+    for(i=0;i<ROW;i++)
+        for(j=0;j<COL;j++)
+            a[i][j]=0;
+    scanf("%d",&n);
+    for(m=1;m<=n;m++)
+    {
+        scanf("%d%d",&x,&y);
+        a[x][y]=1;
+    }
+ 
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            printf("%d", a[i][j]);
+            if(j+1<10)printf(" ");
+        }
+        printf("\n");
+    }
+ 
+}

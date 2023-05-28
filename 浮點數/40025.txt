@@ -1,0 +1,38 @@
+#include <stdio.h>
+#define ARRAYSIZE 10000
+main()
+{
+    int a,i=0,j;
+    double b,c;
+    double A[ARRAYSIZE];
+ 
+    scanf("%d", &a);
+    while (a!=0)
+    {
+        scanf("%lf", &b);
+        scanf("%lf", &c);
+ 
+        if(a==1)
+A[i]=b+c;
+ 
+        if(a==2)
+A[i]=b-c;
+ 
+        if(a==3)
+A[i]=b*c;
+ 
+        if(a==4)
+A[i]=b/c;
+ 
+        i++;
+        scanf("%d", &a);
+    }
+ 
+    i--;
+ 
+    for(j=0;j<=i;j++)
+    {
+        printf("%lf\n",A[j]);
+    }
+ 
+}

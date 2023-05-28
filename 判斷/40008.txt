@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdbool.h>
+main()
+{
+int a,b,c,d;
+scanf("%d%d%d",&a,&b,&c);
+if(a==1){
+        d=b+c;printf("%d",d);}
+    else
+    if(a==2){
+        d=b-c;printf("%d",d);}
+        else
+        if(a==3){
+            d=b*c;printf("%d",d);}
+            else
+            if(a==4){
+                d=b/c;printf("%d",d);}
+                else
+                if(a==5){
+                    d=b%c;printf("%d",d);}
+                    else
+                    printf("%d\n_re-enter_c",c);
+}
+
+OR
+
+#include<stdio.h>
+#include<stdbool.h>
+#include  <math.h>
+main()
+{
+int a,b,c,d;
+scanf("%d%d%d",&a,&b,&c);
+switch(a)
+{
+case 1:
+    d=b+c; break;
+case 2:
+    d=b-c; break;
+case 3:
+    d=b*c; break;
+case 4:
+    d=b/c; break;
+case 5:
+    d=b%c; break;
+default:
+    printf("%d\n_re-enter_c",c);
+
+
+}
+printf("%d",d);
+}

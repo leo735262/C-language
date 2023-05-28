@@ -1,0 +1,19 @@
+int data_max(int data[], int n)
+{
+    int k=data[0],i;
+    for(i=0;i<n;i++)
+    {
+        if(data[i]>k)k=data[i];
+    }
+    return k;
+}
+ 
+int data_min(int data[], int n)
+{
+    int k=data[0],i;
+    for(i=0;i<n;i++)
+    {
+        if(data[i]<k)k=data[i];
+    }
+    return k;
+}

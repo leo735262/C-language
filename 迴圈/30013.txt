@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<assert.h>
+#include <math.h>
+main()
+{
+int a,b,c,i,j;
+scanf("%d%d%d",&a,&b,&c);
+if(a<b){
+    for(i=a;i<=b;i+=c){
+        for(j=1;j<=i;j++)
+        printf("0");
+        printf("\n");
+    }
+  }
+
+  if(a>b){
+    for(i=a;i>=b;i-=c){
+        for(j=1;j<=i;j++)
+        printf("0");
+        printf("\n");
+    }
+  }
+if(a==b){for(int h=0;h<a;h++)
+        printf("0");
+        }
+}

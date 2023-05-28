@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdbool.h>
+main()
+{
+int a,b;
+scanf("%d%d",&a,&b);
+int n=a%b,m=b%a;
+bool factor=(n==0||m==0);
+printf("%d\n",factor);
+}

@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdbool.h>
+main()
+{
+int a;
+scanf("%d",&a);
+bool number=(a==1||a==2||a==3||a==5||a==8||a==13||a==21||a==34||a==55||a==89);
+printf("%d\n",number);
+}
+

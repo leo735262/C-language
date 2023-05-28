@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<stdbool.h>
+main()
+{
+int x,L1,L2,w1,w2;
+scanf("%d%d%d%d%d",&x,&L1,&L2,&w1,&w2);
+bool k=(x==L1*w1+L2*w2||x==L1*w1||x==L2*w2||x==L1*w2||x==L2*w1||x==L1*w2+L2*w1||x==L1*(w2+w1)||x==L2*(w2+w1));
+printf("%d\n",k);
+}

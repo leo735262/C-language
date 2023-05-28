@@ -1,0 +1,124 @@
+#include <stdio.h>
+#include<assert.h>
+#include<stdlib.h>
+#include<string.h>
+typedef struct list_node *list_pointer;
+
+typedef struct list_node
+
+{    int id;
+
+     char name[20];
+
+     list_pointer link;
+
+} list_node;
+
+list_pointer head,per,back;
+list_pointer nodeadd;
+
+
+void add(int addid){
+
+nodeadd=(list_pointer)malloc(sizeof(list_node));
+
+nodeadd->id=addid;
+printf("請輸入姓名:");
+scanf("%s",nodeadd->name);
+per=head;
+back=per->link;
+
+while((back!=NULL) && (back->id>nodeadd->id)){
+
+  per=back;
+  back=back->link;
+
+}
+
+nodeadd->link=back;
+per->link=nodeadd;
+
+printlist();
+
+}
+
+
+void search(int number){
+per=head;
+back=per->link;
+while(back!=NULL&&back->id>=number){
+ if(back->id==number){
+      printf("%d %s\n",back->id,back->name);
+    return 0;
+ }
+
+  per=back;
+  back=back->link;
+    }
+    printf("學生資料不存在\n");
+}
+void delete(int number){
+per=head;
+back=per->link;
+
+while(back!=NULL&&back->id>=number){
+
+ if(back->id==number){
+    per->link=back->link;
+    free(back);
+    printlist();
+    return 0;
+ }
+
+  per=back;
+  back=back->link;
+    }
+    printf("學生資料不存在\n");
+}
+
+void printlist(){
+
+back=head->link;
+while(back!=NULL){
+    printf("%d %s\n",back->id,back->name);
+    back=back->link;
+    }
+}
+
+int main()
+{
+    int  a,number;
+    char name[20];
+    head = (list_pointer)malloc(sizeof(list_node));
+    head->link=NULL;
+    printf("請輸入數字 1 2 3 4\n輸入1是增加\n輸入2是刪除\n輸入3是搜尋\n輸入4是結束選單\n");
+ while(scanf("%d",&a)){
+ assert(a<=4&&a>0);
+ if(a==1)
+{
+    printf("請輸入新增學號:");
+    scanf("%d",&number);
+   add(number);
+}
+
+  else if(a==2)
+{
+    printf("請輸入刪除學號:");
+        scanf("%d",&number);
+    delete(number);
+}
+ else if(a==3)
+{
+    printf("請輸入搜尋學號:");
+    scanf("%d",&number);
+    search(number);
+
+}
+else
+    break;
+    printf("請輸入數字 1 2 3 4\n");
+
+ }
+
+    return 0;
+}

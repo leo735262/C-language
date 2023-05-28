@@ -1,0 +1,16 @@
+#include<stdio.h>
+main()
+{
+int i,j;
+scanf("%d%d",&i,&j);
+int k=i+j;
+printf("%d\n",k);
+int l=i-j;
+printf("%d\n",l);
+int m=i*j;
+printf("%d\n",m);
+int o=i/j;
+printf("%d\n",o);
+int n=i%j;
+printf("%d\n",n);
+}

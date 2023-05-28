@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <assert.h>
+#define ROWA 4
+#define COLA 3
+#define ROWB 4
+#define COLB 3
+#define ROWC 4
+#define COLC 3
+ 
+main()
+{
+    int i,j;
+    int a[ROWA][COLA],b[ROWB][COLB],c[ROWC][COLC];
+    for(i=0;i<ROWA;i++)
+        for(j=0;j<COLA;j++)
+            scanf("%d",&(a[i][j]));
+ 
+    for(i=0;i<ROWB;i++)
+        for(j=0;j<COLB;j++)
+            scanf("%d",&(b[i][j]));
+ 
+    for(i=0;i<ROWC;i++)
+        for(j=0;j<COLC;j++)
+            c[i][j]=a[i][j]*b[i][j];
+ 
+    for(i=0;i<ROWC;i++)
+        for(j=0;j<COLC;j++)
+            printf("%d\n",c[i][j]);
+ 
+}

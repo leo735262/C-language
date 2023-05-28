@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdbool.h>
+main()
+{
+int v0,a,t,L;
+scanf("%d%d%d%d",&v0,&a,&t,&L);
+int v=v0+a*t;
+bool speedover=(v>L);
+printf("%d\n",speedover);
+}
